@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jackson_siro.mbible"
+    android:versionCode="1"
+    android:versionName="0.0.0.12" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="22" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <supports-screens android:largeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Aaa"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@+android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AaaAb"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@+android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".AaaAbc"
+            android:label="@string/app_name"
+            android:noHistory="true" />
+        <activity
+            android:name=".AaaDemo"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@+android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".Bb_Loading"
+            android:label="@string/welcome_to_vsb"
+            android:noHistory="true" />
+
+        <provider
+            android:name=".bibles.BibleProvider"
+            android:authorities="com.jackson_siro.mbible.bibles.BibleProvider"
+            android:exported="true" />
+        <provider
+            android:name=".bibles.BibleDbProv"
+            android:authorities="com.jackson_siro.mbible.bibles.BibleDbProv"
+            android:exported="true" />
+
+        <activity
+            android:name=".Bible"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.jackson_siro.mbible.bibles.Searchable" />
+        </activity>
+        <activity
+            android:name=".bible_en.EnBibleChoose"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".bible_en.EnBibleView"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".bibles.Searchable"
+            android:parentActivityName=".Bible" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".bibles.BibleView"
+            android:parentActivityName=".Bible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.bibles.Searchable" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.jackson_siro.mbible.bibles.Searchable" />
+        </activity>
+        <activity
+            android:name=".bibles.BibleCopy"
+            android:noHistory="true"
+            android:parentActivityName=".Bible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_set_app"
+            android:parentActivityName=".Bible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".Settings1"
+            android:label="@string/menu_settings"
+            android:parentActivityName=".Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Settings" />
+        </activity>
+        <activity
+            android:name=".Settings2"
+            android:label="@string/title_activity_settings_i"
+            android:parentActivityName=".Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Settings" />
+        </activity>
+        <activity
+            android:name=".Settings3"
+            android:label="@string/title_activity_settings_ii"
+            android:parentActivityName=".Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Settings" />
+        </activity>
+        <activity
+            android:name=".Settings4"
+            android:label="@string/menu_settings"
+            android:parentActivityName=".Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Settings" />
+        </activity>
+        <activity
+            android:name=".HelpDesk"
+            android:label="@string/title_activity_help_desk"
+            android:parentActivityName=".Biblex" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".Bible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".bibles.Favourites"
+            android:label="@string/title_favourites"
+            android:parentActivityName=".Bible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.Bible" />
+        </activity>
+        <activity
+            android:name=".bibles.Favourite"
+            android:label="@string/app_name"
+            android:parentActivityName=".bibles.Favourites" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jackson_siro.mbible.bibles.Favourites" />
+        </activity>
+        <activity
+            android:name=".MBibleInfo"
+            android:label="@string/title_activity_mbible_info" >
+        </activity>
+    </application>
+
+</manifest>

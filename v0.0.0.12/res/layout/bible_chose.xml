@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"    
+    tools:context="com.jackson_siro.mbible.EnBibleChoose" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbar_background"
+        android:gravity="center"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Chapter? [1 - 50]"
+            android:textColor="#fff"
+            android:textSize="35sp"
+            android:padding="5dp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/main"
+        android:layout_below="@+id/top" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+		
+	</RelativeLayout>
+	
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true" >
+
+        <TableLayout
+            android:id="@+id/myKeypad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+				
+				<Button
+					android:id="@+id/buttonx"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="9"
+					android:layout_alignParentTop="true"
+					android:layout_weight="1.0"
+					android:textSize="50sp"
+					android:layout_alignRight="@+id/editText1" />
+
+            </TableRow>
+			
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+				
+				<Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:layout_weight="1.0"
+                    android:textSize="50sp"
+                     />
+				
+				<Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:layout_weight="1.0"
+                    android:textSize="50sp"
+                     />
+				
+				<Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:layout_weight="1.0"
+                    android:textSize="50sp"
+                     />
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+	    
+</RelativeLayout>

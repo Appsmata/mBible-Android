@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="2dp" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="desc"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/bookname_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bookname_ii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bookname_i"
+        android:layout_below="@+id/bookname_i"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/abbrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bookname_i"
+        android:layout_alignBottom="@+id/bookname_i"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:textSize="16sp" />
+</RelativeLayout>

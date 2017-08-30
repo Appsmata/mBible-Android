@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/scrollView1"
+    android:background="#eee"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+    
+    <LinearLayout 
+        android:orientation="vertical"
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp">
+                        
+        <LinearLayout 
+            android:orientation="vertical"
+			android:background="@drawable/border"
+			android:padding="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="7dp">
+            
+            <TextView 
+                android:textSize="18dp"
+				android:textColor="#000"
+				android:id="@+id/installed_on"
+				android:padding="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Installed on" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:orientation="vertical"
+			android:background="@drawable/border"
+			android:padding="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="7dp">
+            
+            <TextView 
+                android:textSize="18dp"
+		        android:textColor="#000"
+		        android:id="@+id/installed_desc"
+		        android:padding="10dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Expires On" />
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:orientation="vertical"
+		    android:id="@+id/vsb_instr"
+			android:background="@drawable/border"
+			android:padding="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="7dp">
+            
+            <TextView 
+                android:textSize="18dp"
+		        android:textColor="#000"
+		        android:id="@+id/vsb_instructions"
+		        android:padding="10dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/critical_text_iii" />
+        </LinearLayout>
+        
+    </LinearLayout>
+</ScrollView>
